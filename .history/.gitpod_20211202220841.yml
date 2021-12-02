@@ -4,19 +4,12 @@ tasks:
       python -m pip install --upgrade pip
       python -m pip install --upgrade pip setuptools wheel pip-tools robotframework
       python -m pip install --upgrade git+https://github.com/my8100/scrapydweb.git
-      python setup.py install
-      python -m pip install pytest
-      python -m pip install coverage 
+       
       sudo apt-get install lynx direnv -y
     command: |
       echo 'TODO: start app'
       python -m pip install -U -r requirements.txt
-      python -m pip install -U -r requirements.txt
-      coverage run -m pytest tests/test_a_factory.py -s -vv -x
-      coverage run -m pytest tests -s -vv --disable-warnings
-      coverage report
-      # Чтобы создать отчет HTML
-      coverage html
+      # printf "#!/usr/bin/env bash \nexport z='EasyQuest'" > .envrc;direnv allow
       echo 'TODO:Good!!!'
 
 vscode:

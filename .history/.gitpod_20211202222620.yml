@@ -12,11 +12,11 @@ tasks:
       echo 'TODO: start app'
       python -m pip install -U -r requirements.txt
       python -m pip install -U -r requirements.txt
-      coverage run -m pytest tests/test_a_factory.py -s -vv -x
-      coverage run -m pytest tests -s -vv --disable-warnings
-      coverage report
-      # Чтобы создать отчет HTML
-      coverage html
+      coverage run --source=scrapydweb -m pytest tests/test_a_factory.py -s -vv -x
+      coverage run --source=scrapydweb -m pytest tests -s -vv --disable-warnings
+(scrapydweb) $ coverage report
+# To create an HTML report, check out htmlcov/index.html
+(scrapydweb) $ coverage html
       echo 'TODO:Good!!!'
 
 vscode:
